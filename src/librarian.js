@@ -18,7 +18,7 @@ class Librarian {
   findBook(bookName){
     for (var genre in this.library.shelves){
       for(var i=0;i<this.library.shelves[genre].length;i++){
-        if(bookName === this.library.shelves[genre][i]){
+        if(bookName === this.library.shelves[genre][i].title){
           this.library.shelves[genre].splice(i,1)
           return `Yes, we have ${bookName}`
         } else {

@@ -12,7 +12,7 @@ function createLibrary(name){
 }
 
 function addBook(library,book){
-  library.shelves[`${book.genre}`].push(book.title)
+  library.shelves[`${book.genre}`].push(book)
 }
 
 function checkoutBook(library, bookName, genre){
