@@ -27,7 +27,7 @@ class Librarian {
       }
     }
   }
-
+  
   calculateLateFee(days){
     return Math.ceil(.25 * days)
   }

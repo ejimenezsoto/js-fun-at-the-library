@@ -1,5 +1,5 @@
 function createTitle(title) {
-  return `The ${title}`
+  return `The ${title}`;
 }
 
 function buildMainCharacter(name,age,pronouns){
@@ -8,12 +8,13 @@ function buildMainCharacter(name,age,pronouns){
     age: age,
     pronouns: pronouns
   }
-  return character
+  return character;
 }
 function saveReview(review,arr){
   if(arr.length === 0){
     return arr.push(review)
   }
+
   for(var i=0;i<arr.length;i++){
     if(review === arr[i]){
       return

@@ -14,7 +14,6 @@ var title = "Harry Potter";
 var pages = 234;
 
 
-
 // Reassign (not initialize) your "pages" variable from above. An editor came around and
 // condensed the book, use a built in math operator to make the page count a quarter
 // of what it currently is 

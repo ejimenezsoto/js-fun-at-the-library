@@ -1,5 +1,3 @@
-
-
 function shelfBook(book,shelf){
   if(shelf.length >= 3){
     return
@@ -9,7 +7,6 @@ function shelfBook(book,shelf){
   } else {
     shelf.unshift(book)
   }
-  
 }
 
 function unshelfBook(bookName,shelf){
@@ -41,8 +38,6 @@ function searchShelf(shelf,title){
   }
   return false
 }
-
-
 
 module.exports = {
   shelfBook,
