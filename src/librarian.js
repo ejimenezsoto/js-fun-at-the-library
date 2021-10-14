@@ -14,9 +14,24 @@ class Librarian {
     }
     return `Hello, ${name}!`
   }
+
   findBook(bookName){
-    
+    for (var genre in this.library.shelves){
+      for(var i=0;i<this.library.shelves[genre].length;i++){
+        if(bookName === this.library.shelves[genre][i]){
+          this.library.shelves[genre].splice(i,1)
+          return `Yes, we have ${bookName}`
+        } else {
+          return `Sorry, we do not have ${bookName}`
+        }
+      }
+    }
   }
+
+  calculateLateFee(days){
+    return Math.ceil(.25 * days)
+  }
+
 }
 
 
