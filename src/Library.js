@@ -15,8 +15,10 @@ function addBook(library,book){
 }
 
 function checkoutBook(library, bookName, genre){
-  for(var i=0;i<library.shelves[genre].length;i++){
-    if(bookName === library.shelves[genre][i].title){
+  var len = library.shelves[genre].length;
+  for(var i=0;i<len;i++){
+    var bookTitle = library.shelves[genre][i].title
+    if(bookName === bookTitle){
       library.shelves[genre].splice(i,1)
       return `You have now checked out ${bookName} from the ${library.name}`
     }
