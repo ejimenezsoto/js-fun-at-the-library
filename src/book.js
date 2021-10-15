@@ -2,46 +2,39 @@ function createTitle(title) {
   return `The ${title}`;
 }
 
-function buildMainCharacter(name,age,pronouns){
+function buildMainCharacter(charName,charAge,charPronouns){
   var character = {
-    name: name,
-    age: age,
-    pronouns: pronouns
+    name: charName,
+    age: charAge,
+    pronouns: charPronouns
   }
   return character;
 }
-function saveReview(review,arr){
-  if(arr.length === 0){
-    return arr.push(review)
-  }
 
-  for(var i=0;i<arr.length;i++){
-    if(review === arr[i]){
-      return
-    } else {
-      return arr.push(review)
-    }
+function saveReview(review,reviewsArr){
+  if(reviewsArr.includes(review)){
+    return
+  } else {
+    reviewsArr.push(review)
   }
-  
 }
 
 function calculatePageCount(bookTitle){
-  
   return 20 * bookTitle.length
 }
 
-function writeBook(bookTitle,bookCharacter,genre){
+function writeBook(bookTitle,bookCharacter,bookGenre){
   var book = {
     title: bookTitle,
     mainCharacter: bookCharacter,
-    pageCount: 20 * bookTitle.length,
-    genre: genre
+    pageCount: calculatePageCount(bookTitle),
+    genre: bookGenre
   }
   return book
 }
 
 function editBook(book){
-  book.pageCount = book.pageCount * .75
+  book.pageCount *= .75
 }
 
 module.exports = {

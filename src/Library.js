@@ -1,5 +1,4 @@
 function createLibrary(name){
-  
   var library = {
     name: name,
     shelves: {
@@ -12,13 +11,13 @@ function createLibrary(name){
 }
 
 function addBook(library,book){
-  library.shelves[`${book.genre}`].push(book)
+  library.shelves[book.genre].push(book)
 }
 
 function checkoutBook(library, bookName, genre){
   for(var i=0;i<library.shelves[genre].length;i++){
-    if(bookName === library.shelves[`${genre}`][i].title){
-      library.shelves[`${genre}`].splice(i,1)
+    if(bookName === library.shelves[genre][i].title){
+      library.shelves[genre].splice(i,1)
       return `You have now checked out ${bookName} from the ${library.name}`
     }
   }

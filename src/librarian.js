@@ -3,6 +3,7 @@ class Librarian {
     this.name = name;
     this.library = library
   }
+
   greetPatron(name,isMorning) {
     if(isMorning === undefined){
       this.isMorning = false
@@ -11,8 +12,9 @@ class Librarian {
     }
     if(this.isMorning === true ){
       return `Good morning, ${name}!`
+    } else {
+      return `Hello, ${name}!`
     }
-    return `Hello, ${name}!`
   }
 
   findBook(bookName){
@@ -27,12 +29,11 @@ class Librarian {
       }
     }
   }
-  
   calculateLateFee(days){
     return Math.ceil(.25 * days)
   }
-
 }
+
 
 
 module.exports = Librarian;
